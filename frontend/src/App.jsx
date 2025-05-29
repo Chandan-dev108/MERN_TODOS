@@ -13,27 +13,27 @@ function App() {
 
   // Function to fetch tasks from backend
   const fetchTasks = async () => {
-    const res = await axios.get("https://mern-todos-7i80.onrender.com");
+    const res = await axios.get("https://mern-todos-prlj.onrender.com");
     setTasks(res.data); // Store tasks in state
   };
 
   // Add new task
   const addTask = async () => {
     if (text === "") return; // Prevent empty tasks
-    const res = await axios.post("https://mern-todos-7i80.onrender.com", { text });
+    const res = await axios.post("https://mern-todos-prlj.onrender.com", { text });
     setTasks([...tasks, res.data]); // Add new task to state
     setText(""); // Clear input field
   };
 
   // Delete a task
   const deleteTask = async (id) => {
-    await axios.delete(`https://mern-todos-7i80.onrender.com/${id}`);
+    await axios.delete(`https://mern-todos-prlj.onrender.com/${id}`);
     setTasks(tasks.filter((task) => task._id !== id)); // Remove from state
   };
 
   // Toggle task completion status
   const toggleComplete = async (id, completed) => {
-    const res = await axios.put(`https://mern-todos-7i80.onrender.com/${id}`, {
+    const res = await axios.put(`https://mern-todos-prlj.onrender.com/${id}`, {
       completed: !completed,
     });
     setTasks(tasks.map((task) => (task._id === id ? res.data : task)));
