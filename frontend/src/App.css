@@ -1,0 +1,11 @@
+.as{
+    background-color: aquamarine;
+    width: 50%;
+    margin-left: 24%;
+    height: auto;
+    padding: 20px;
+    border-radius: 5px;
+}
+body{
+    background-color: rgb(224, 216, 255);
+}
