@@ -5,7 +5,6 @@ function App() {
   // State to store tasks
   const [tasks, setTasks] = useState([]);
   const [text, setText] = useState("");
-
   // Fetch tasks on component mount
   useEffect(() => {
     fetchTasks();
